@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سوبرماركت يا هلا — هارلم | Ya Hala Supermarkt — Haarlem</title>
+  <meta name="description" content="سوبرماركت يا هلا في هارلم — خضروات طازجة، فواكه، لحوم وأكثر. Bernadottelaan 3A, 2037GK Haarlem" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#" class="nav-brand">
+    <div class="nav-logo" style="background: #1a1a1a; color: var(--accent); border-radius: 50%;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+    </div>
+    <div class="nav-brand-text">
+      <span class="name" data-ar="سوبرماركت يا هلا" data-nl="Ya Hala Supermarkt">سوبرماركت يا هلا</span>
+      <span class="city" data-ar="هارلم" data-nl="Haarlem" style="color: var(--accent);">هارلم</span>
+    </div>
+  </a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero" class="active" data-ar="الرئيسية" data-nl="Home">الرئيسية</a></li>
+    <li><a href="#products" data-ar="المنتجات" data-nl="Producten">المنتجات</a></li>
+    <li><a href="#weekly-offers" data-ar="العروض" data-nl="Aanbiedingen">العروض</a></li>
+    <li><a href="#about" data-ar="من نحن" data-nl="Over ons">من نحن</a></li>
+    <li><a href="#contact" data-ar="اتصل بنا" data-nl="Contact">اتصل بنا</a></li>
+  </ul>
+
+  <div class="nav-controls">
+    <button class="lang-btn active" id="btnAr" onclick="setLang('ar')">AR</button>
+    <button class="lang-btn" id="btnNl" onclick="setLang('nl')">NL</button>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero" data-ar="الرئيسية" data-nl="Home" onclick="closeMenu()">الرئيسية</a>
+  <a href="#products" data-ar="المنتجات" data-nl="Producten" onclick="closeMenu()">المنتجات</a>
+  <a href="#weekly-offers" data-ar="العروض" data-nl="Aanbiedingen" onclick="closeMenu()">العروض</a>
+  <a href="#about" data-ar="من نحن" data-nl="Over ons" onclick="closeMenu()">من نحن</a>
+  <a href="#contact" data-ar="اتصل بنا" data-nl="Contact" onclick="closeMenu()">اتصل بنا</a>
+</div>
+
+<!-- LUXURY MAIN HERO -->
+<section class="premium-hero" id="hero">
+  <div class="premium-glow-bg"></div>
+  <div class="premium-hero-inner">
+    <div class="premium-content">
+      <div class="premium-badge">✨ <span data-ar="مرحباً بكم" data-nl="Welkom">مرحباً بكم</span></div>
+      <h1 data-ar="سوبر ماركت يا هلا بهارلم" data-nl="Ya Hala Supermarkt Haarlem">سوبر ماركت يا هلا بهارلم</h1>
+      <p data-ar="خضروات، فواكه، لحوم ومنتجات يومية طازجة" data-nl="Groenten, fruit, vlees en dagelijkse verse producten">خضروات، فواكه، لحوم ومنتجات يومية طازجة</p>
+      <div class="premium-btns">
+        <a href="#weekly-offers" class="btn-gold" data-ar="شاهد العروض" data-nl="Aanbiedingen bekijken">شاهد العروض</a>
+      </div>
+    </div>
+    <div class="premium-img-wrap">
+      <img src="premium-hero.png" alt="Ya Hala Supermarket" loading="eager" />
+      <div class="premium-glow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKLY OFFERS HERO -->
+<section class="hero" id="hero" style="padding-top: 1.5rem;">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge" style="background-color: #fce6a8; color: #b18500; border: none; border-radius: 20px;">
+        <span style="display:none;"></span>
+        <span data-ar="HAARLEM • BERNADOTTELAAN 3A •" data-nl="HAARLEM • BERNADOTTELAAN 3A •" style="letter-spacing: 1px; font-weight: 800;">HAARLEM • BERNADOTTELAAN 3A •</span>
+      </div>
+      <h1 data-ar="منتجات طازجة وبأعلى جودة" data-nl="Verse Producten van de Hoogste Kwaliteit">منتجات طازجة وبأعلى جودة</h1>
+      <p data-ar="خضروات، فواكه، لحوم ومنتجات يومية طازجة — كل يوم في هارلم." data-nl="Groenten, fruit, vlees en verse dagelijkse producten — elke dag in Haarlem.">خضروات، فواكه، لحوم ومنتجات يومية طازجة — كل يوم في هارلم.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn-primary" data-ar="تصفح المنتجات" data-nl="Producten bekijken">تصفح المنتجات</a>
+        <a href="#weekly-offers" class="btn-secondary" data-ar="شاهد العروض" data-nl="Aanbiedingen bekijken">شاهد العروض</a>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="grocery_store_vegetables.png" alt="منتجات طازجة" loading="eager" />
+      <div class="hero-float">
+        <div class="hero-float-icon" style="background: #f1c40f; color: #1a1a1a; font-size: 1.3rem; border-radius: 8px;">★</div>
+        <div>
+          <p data-ar="طازج" data-nl="Vers">طازج</p>
+          <small data-ar="نتسوق يومياً لنقدم أفضل طعم." data-nl="Dagelijks vers ingekocht.">نتسوق يومياً لنقدم أفضل طعم.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKLY OFFERS -->
+<section class="section section-alt" id="weekly-offers">
+  <div class="section-header">
+    <div class="section-header-text">
+      <h2 data-ar="عروضنا" data-nl="Onze Aanbiedingen">عروضنا</h2>
+      <p data-ar="استمتع بعروضنا اليومية، الأسبوعية، والشهرية!" data-nl="Geniet van onze dagelijkse, wekelijkse en maandelijkse aanbiedingen!">استمتع بعروضنا اليومية، الأسبوعية، والشهرية!</p>
+      <div style="display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap;">
+        <button style="background: var(--accent); color: #1a1a1a; border: none; padding: 0.4rem 1.25rem; border-radius: 20px; font-family: 'Cairo', sans-serif; font-weight: 700; cursor: pointer;">يومية</button>
+        <button style="background: transparent; color: var(--text2); border: 2px solid var(--border); padding: 0.4rem 1.25rem; border-radius: 20px; font-family: 'Cairo', sans-serif; font-weight: 700; cursor: pointer;">أسبوعية</button>
+        <button style="background: transparent; color: var(--text2); border: 2px solid var(--border); padding: 0.4rem 1.25rem; border-radius: 20px; font-family: 'Cairo', sans-serif; font-weight: 700; cursor: pointer;">شهرية</button>
+      </div>
+    </div>
+    <a href="offers.html" class="section-link" data-ar="→ عرض كل العروض" data-nl="→ Alle aanbiedingen">→ عرض كل العروض</a>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="strawberries.png" alt="فراولة" loading="lazy" />
+        <div class="product-badge">🍓 <span data-ar="فواكه" data-nl="Fruit">فواكه</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="فراولة" data-nl="Aardbeien">فراولة</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€2.99</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="bananas.png" alt="موز" loading="lazy" />
+        <div class="product-badge">🍌 <span data-ar="فواكه" data-nl="Fruit">فواكه</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="موز" data-nl="Bananen">موز</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€1.29</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="watermelon.png" alt="بطيخ" loading="lazy" />
+        <div class="product-badge">🍉 <span data-ar="فواكه" data-nl="Fruit">فواكه</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="بطيخ" data-nl="Watermeloen">بطيخ</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€3.99</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="fresh_fruits_display.png" alt="تمر طازج" loading="lazy" />
+        <div class="product-badge">🌴 <span data-ar="فواكه" data-nl="Fruit">فواكه</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="تمر طازج" data-nl="Verse Dadels">تمر طازج</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€4.99</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="section-header">
+    <div class="section-header-text">
+      <h2 data-ar="أقسامنا" data-nl="Onze Afdelingen">أقسامنا</h2>
+      <p data-ar="منتجات طازجة وبجودة عالية" data-nl="Verse producten van hoge kwaliteit">منتجات طازجة وبجودة عالية</p>
+    </div>
+    <a href="#products" class="section-link" data-ar="→ اتصفح المنتجات" data-nl="→ Producten bekijken">→ اتصفح المنتجات</a>
+  </div>
+  <div class="categories-grid">
+    <div class="cat-card" onclick="scrollToProducts('خضروات')">
+      <img src="grocery_store_vegetables.png" alt="خضروات" loading="lazy" />
+      <div class="cat-card-label" data-ar="خضروات" data-nl="Groenten">خضروات</div>
+    </div>
+    <div class="cat-card" onclick="scrollToProducts('فواكه')">
+      <img src="fresh_fruits_display.png" alt="فواكه" loading="lazy" />
+      <div class="cat-card-label" data-ar="فواكه" data-nl="Fruit">فواكه</div>
+    </div>
+    <div class="cat-card" onclick="scrollToProducts('لحوم')">
+      <img src="fresh_meat.png" alt="لحوم" loading="lazy" />
+      <div class="cat-card-label" data-ar="لحوم" data-nl="Vlees">لحوم</div>
+    </div>
+    <div class="cat-card" onclick="scrollToProducts('منتجات يومية')">
+      <img src="grocery_store_vegetables.png" alt="منتجات يومية" loading="lazy" style="filter:hue-rotate(30deg)" />
+      <div class="cat-card-label" data-ar="منتجات يومية" data-nl="Dagelijkse producten">منتجات يومية</div>
+    </div>
+    <div class="cat-card" onclick="scrollToProducts('منتجات يمنية')">
+      <img src="yemeni_spices.png" alt="منتجات يمنية" loading="lazy" />
+      <div class="cat-card-label" data-ar="منتجات يمنية" data-nl="Jemenitische producten">منتجات يمنية</div>
+    </div>
+    <div class="cat-card" onclick="scrollToProducts('منتجات سورية')">
+      <img src="fresh_tomatoes.png" alt="منتجات سورية" loading="lazy" />
+      <div class="cat-card-label" data-ar="منتجات سورية" data-nl="Syrische producten">منتجات سورية</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="section section-alt" id="products">
+  <div class="section-header">
+    <div class="section-header-text">
+      <h2 data-ar="منتجات مميزة" data-nl="Uitgelichte Producten">منتجات مميزة</h2>
+      <p data-ar="أحدث ما لدينا من منتجات طازجة" data-nl="Het beste van ons verse aanbod">أحدث ما لدينا من منتجات طازجة</p>
+    </div>
+    <a href="#" class="section-link" data-ar="→ اتصفح المنتجات" data-nl="→ Meer producten">→ اتصفح المنتجات</a>
+  </div>
+  <div class="products-grid">
+    <!-- Row 1 -->
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="bell_peppers.png" alt="فلفل أحمر" loading="lazy" />
+        <div class="product-badge">🫑 <span data-ar="خضروات" data-nl="Groenten">خضروات</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="فلفل ملون" data-nl="Paprika Mix">فلفل ملون</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€1.49</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="fresh_tomatoes.png" alt="طماطم طازجة" loading="lazy" />
+        <div class="product-badge">🍅 <span data-ar="خضروات" data-nl="Groenten">خضروات</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="طماطم طازجة" data-nl="Verse Tomaten">طماطم طازجة</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€1.99</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="fresh_meat.png" alt="لحم خروف" loading="lazy" />
+        <div class="product-badge">🥩 <span data-ar="لحوم" data-nl="Vlees">لحوم</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="لحم خروف" data-nl="Lamsvlees">لحم خروف</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€11.99</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="yemeni_spices.png" alt="بهارات مندي" loading="lazy" />
+        <div class="product-badge">🌶️ <span data-ar="منتجات يمنية" data-nl="Jemenitisch">منتجات يمنية</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="بهارات مندي" data-nl="Mandi Kruiden">بهارات مندي</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€3.49</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YEMENI PRODUCTS -->
+<section class="section" id="yemeni">
+  <div class="section-header">
+    <div class="section-header-text">
+      <h2 data-ar="المنتجات اليمنية" data-nl="Jemenitische Producten">المنتجات اليمنية</h2>
+      <p data-ar="نكهات يمنية أصيلة، مختارة بعناية" data-nl="Authentieke Jemenitische smaken, zorgvuldig geselecteerd">نكهات يمنية أصيلة، مختارة بعناية</p>
+    </div>
+    <a href="#" class="section-link" data-ar="→ اتصفح المنتجات" data-nl="→ Meer producten">→ اتصفح المنتجات</a>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img-wrap" style="background:#fdf6e3">
+        <img src="yemeni_honey.png" alt="عسل يمني" loading="lazy" style="object-fit:contain;padding:1rem" />
+        <div class="product-badge">🍯 <span data-ar="منتجات يمنية" data-nl="Jemenitisch">منتجات يمنية</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="عسل حضرمي" data-nl="Hadrami Honing">عسل حضرمي</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€24.99</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="bint_alsahn.png" alt="بنت الصحن" loading="lazy" />
+        <div class="product-badge">🍽️ <span data-ar="منتجات يمنية" data-nl="Jemenitisch">منتجات يمنية</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="بنت الصحن" data-nl="Bint Al-Sahn">بنت الصحن</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€6.99</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap">
+        <img src="yemeni_spices.png" alt="بهارات مندي" loading="lazy" />
+        <div class="product-badge">🌶️ <span data-ar="منتجات يمنية" data-nl="Jemenitisch">منتجات يمنية</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="بهارات مندي" data-nl="Mandi Kruiden">بهارات مندي</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€3.49</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap" style="background:#fdf6e3">
+        <img src="fresh_fruits_display.png" alt="حلبة" loading="lazy" />
+        <div class="product-badge">🌿 <span data-ar="منتجات يمنية" data-nl="Jemenitisch">منتجات يمنية</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="حلبة" data-nl="Fenegriek">حلبة</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€2.99</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYRIAN PRODUCTS -->
+<section class="section section-alt" id="syrian">
+  <div class="section-header">
+    <div class="section-header-text">
+      <h2 data-ar="المنتجات السورية" data-nl="Syrische Producten">المنتجات السورية</h2>
+      <p data-ar="كلاسيكيات من المطبخ السوري — طازجة وأصيلة." data-nl="Klassiekers uit de Syrische keuken — vers en authentiek.">كلاسيكيات من المطبخ السوري — طازجة وأصيلة.</p>
+    </div>
+    <a href="#" class="section-link" data-ar="→ اتصفح المنتجات" data-nl="→ Meer producten">→ اتصفح المنتجات</a>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img-wrap" style="background:#fcfaf5">
+        <!-- <img src="halawet_el_jibn.png" alt="حلاوة الجبن" loading="lazy" /> -->
+        <div class="product-badge">🇸🇾 <span data-ar="منتجات سورية" data-nl="Syrisch">منتجات سورية</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="حلاوة الجبن" data-nl="Halawet El Jibn">حلاوة الجبن</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€6.49</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap" style="background:#e3e0db">
+        <!-- <img src="aleppo_soap.png" alt="صابون حلب" loading="lazy" /> -->
+        <div class="product-badge">🇸🇾 <span data-ar="منتجات سورية" data-nl="Syrisch">منتجات سورية</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="صابون حلب" data-nl="Aleppo Zeep">صابون حلب</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€3.99</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap" style="background:#fcfaf5">
+        <!-- <img src="muhammara.png" alt="محمرة" loading="lazy" /> -->
+        <div class="product-badge">🇸🇾 <span data-ar="منتجات سورية" data-nl="Syrisch">منتجات سورية</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="محمرة" data-nl="Muhammara">محمرة</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€5.49</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img-wrap" style="background:#e3e5e7">
+        <!-- <img src="makdous.png" alt="مكدوس" loading="lazy" /> -->
+        <div class="product-badge">🇸🇾 <span data-ar="منتجات سورية" data-nl="Syrisch">منتجات سورية</span></div>
+      </div>
+      <div class="product-info">
+        <h3 data-ar="مكدوس" data-nl="Makdous">مكدوس</h3>
+        <div class="product-price">
+          <span class="price-label" data-ar="ابتداء من" data-nl="Vanaf">ابتداء من</span>
+          <span class="price-value">€7.99</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section-alt" id="about">
+  <div class="about-inner">
+    <div class="about-img">
+      <img src="grocery_store_vegetables.png" alt="متجر يا هلا" loading="lazy" />
+    </div>
+    <div class="about-content">
+      <div class="about-location">
+        <span>📍</span>
+        <span>HAARLEM · BERNADOTTELAAN 3A</span>
+      </div>
+      <h2 data-ar="منتجات طازجة وبأعلى جودة" data-nl="Verse Producten van de Hoogste Kwaliteit">منتجات طازجة وبأعلى جودة</h2>
+      <p class="subtitle" data-ar="سوبرماركت الحي في هارلم — طازج، صادق ومرحب." data-nl="De supermarkt van de buurt in Haarlem — vers, eerlijk en gastvrij.">سوبرماركت الحي في هارلم — طازج، صادق ومرحب.</p>
+      <p data-ar="في يا هلا نؤمن أن جودة المشتريات تصنع الفارق. لذلك نختار يومياً الخضروات الطازجة، الفواكه اللذيذة، اللحوم عالية الجودة وكل ما تحتاجه عائلتك. متجرنا هو مكان لقاء أهل الحي. سواء جئت لتسوق سريع أو لتسوق الأسبوع، نخدمك بابتسامة." data-nl="Bij Ya Hala geloven we dat de kwaliteit van uw boodschappen het verschil maakt. Daarom kiezen we dagelijks verse groenten, heerlijk fruit, vlees van hoge kwaliteit en alles wat uw gezin nodig heeft. Ons winkel is een ontmoetingsplek voor buurtbewoners.">في يا هلا نؤمن أن جودة المشتريات تصنع الفارق. لذلك نختار يومياً الخضروات الطازجة، الفواكه اللذيذة، اللحوم عالية الجودة وكل ما تحتاجه عائلتك.</p>
+      <ul class="values-list">
+        <li data-ar="الطازجية أولاً" data-nl="Versheid eerst">الطازجية أولاً</li>
+        <li data-ar="أسعار عادلة" data-nl="Eerlijke prijzen">أسعار عادلة</li>
+        <li data-ar="خدمة شخصية" data-nl="Persoonlijke service">خدمة شخصية</li>
+        <li data-ar="تنوع في المنتجات" data-nl="Gevarieerd aanbod">تنوع في المنتجات</li>
+      </ul>
+      <div class="about-btns">
+        <a href="#contact" class="btn-primary" data-ar="اتصفح المنتجات" data-nl="Producten bekijken">اتصفح المنتجات</a>
+        <a href="#contact" class="btn-secondary" data-ar="شاهد العروض" data-nl="Aanbiedingen bekijken">شاهد العروض</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section" id="contact" style="background-color: var(--bg2);">
+  <div class="contact-inner" style="max-width: 1200px; margin: 0 auto;">
+    <div class="section-header" style="flex-direction: column; align-items: flex-start; margin-bottom: 2rem; max-width: 100%;">
+      <div class="hero-badge" style="background-color: #fce6a8; color: #b18500; border: none; margin-bottom: 1rem; border-radius: 20px; padding: 0.4rem 1rem;">
+        <span style="width: 6px; height: 6px; background: #b18500; border-radius: 50%; display: inline-block;"></span>
+        <span data-ar="اتصل بنا" data-nl="Neem contact op" style="font-weight: 800; font-size: 0.9rem;">اتصل بنا</span>
+      </div>
+      <h2 style="font-size: 2.8rem; font-weight: 900; color: var(--text); margin-bottom: 0.5rem;" data-ar="اتصل بنا" data-nl="Neem contact op">اتصل بنا</h2>
+      <p style="color: var(--text2); font-size: 1.1rem; margin: 0;" data-ar="زرنا أو تواصل معنا — يسعدنا خدمتك." data-nl="Bezoek ons of neem contact op — wij helpen u graag.">زرنا أو تواصل معنا — يسعدنا خدمتك.</p>
+    </div>
+
+    <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+      <!-- Cards -->
+      <div class="contact-cards" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        
+        <!-- Address Card -->
+        <div class="contact-card" style="background: var(--card); border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); border: 1px solid var(--border);">
+          <h4 style="color: var(--text2); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;" data-ar="العنوان" data-nl="Adres">العنوان</h4>
+          <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text);">Bernadottelaan 3A, 2037GK Haarlem</p>
+          <a href="https://maps.google.com/?q=Bernadottelaan+3A,+2037GK+Haarlem" target="_blank" class="btn-dark" style="background: #1a1a1a; color: #fff; padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+            <span data-ar="الاتجاهات" data-nl="Route">الاتجاهات</span> 📍
+          </a>
+        </div>
+
+        <!-- Phone Card -->
+        <div class="contact-card" style="background: var(--card); border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); border: 1px solid var(--border);">
+          <h4 style="color: var(--text2); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;" data-ar="الهاتف" data-nl="Telefoon">الهاتف</h4>
+          <p style="font-size: 1.8rem; font-weight: 900; margin-bottom: 1.5rem; color: var(--text); direction: ltr; text-align: right;">23 12 71 17 06</p>
+          <div style="display: flex; gap: 1rem;">
+            <a href="https://wa.me/312312711706" target="_blank" class="btn-whatsapp" style="background: #25D366; color: #fff; padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+              <span data-ar="واتساب" data-nl="WhatsApp">واتساب</span> 💬
+            </a>
+            <a href="tel:02312711706" class="btn-yellow" style="background: #f1c40f; color: #1a1a1a; padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+              <span data-ar="اتصل بنا" data-nl="Bel ons">اتصل بنا</span> 📞
+            </a>
+          </div>
+        </div>
+
+        <!-- Hours Card -->
+        <div class="contact-card" style="background: var(--card); border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); border: 1px solid var(--border);">
+          <h4 style="color: var(--text2); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;" data-ar="ساعات العمل" data-nl="Openingstijden">ساعات العمل</h4>
+          <p style="font-size: 1.1rem; font-weight: 700; color: var(--text); direction: rtl;"><span data-ar="يومياً" data-nl="Dagelijks">يومياً</span> • <span dir="ltr">08:00 – 22:00</span></p>
+        </div>
+
+      </div>
+
+      <!-- Map -->
+      <div class="contact-map" style="border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); min-height: 400px; border: 1px solid var(--border);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.53986968038!2d4.654388876483569!3d52.3787728720235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5ef44265cc2f1%3A0x6e9a6a8b1a8d0529!2sBernadottelaan%203A%2C%202037%20GK%20Haarlem!5e0!3m2!1sen!2snl!4v1714654315220!5m2!1sen!2snl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+      </div>
+      <span class="brand-name" data-ar="سوبرماركت يا هلا" data-nl="Ya Hala Supermarkt">سوبرماركت يا هلا</span>
+    </div>
+    <p data-ar="© 2025 سوبرماركت يا هلا — هارلم. جميع الحقوق محفوظة." data-nl="© 2025 Ya Hala Supermarkt — Haarlem. Alle rechten voorbehouden.">© 2025 سوبرماركت يا هلا — هارلم. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-btns">
+  <a class="float-btn float-wa" href="https://wa.me/31617711223" target="_blank" title="WhatsApp">💬</a>
+  <a class="float-btn float-phone" href="tel:0617711223" title="Call">📞</a>
+</div>
+
+<script>
+  let currentLang = 'ar';
+  let isDark = false;
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.body.classList.toggle('ltr', lang === 'nl');
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.getElementById('btnAr').classList.toggle('active', lang === 'ar');
+    document.getElementById('btnNl').classList.toggle('active', lang === 'nl');
+    document.querySelectorAll('[data-ar]').forEach(el => {
+      el.textContent = lang === 'ar' ? el.dataset.ar : el.dataset.nl;
+    });
+  }
+
+  function toggleTheme() {
+    isDark = !isDark;
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : '');
+    document.getElementById('themeBtn').textContent = isDark ? '☀️' : '🌙';
+  }
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  function scrollToProducts(cat) {
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Active nav on scroll
+  window.addEventListener('scroll', () => {
+    const sections = ['hero','weekly-offers','categories','products','yemeni','about','contact'];
+    let current = 'hero';
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 100) current = id;
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
+</body>
+</html>
